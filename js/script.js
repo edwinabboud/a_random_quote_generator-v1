@@ -71,22 +71,22 @@ function printQuote(){
   
 
 
-html += `<p class="quote"> ${printQuote.quote} </p>`;
-html += `<p class="source"> ${printQuote.source}</p>`;
+html += `<p class="quote"> ${quoteToPrint.quote} </p>`;
+html += `<p class="source"> ${quoteToPrint.source}</p>`;
 
 if (quoteToPrint.citation !== undefined){
-  html += `<span class="citation"> ${printQuote.citation} </span>`;
+  html += `<span class="citation"> ${quoteToPrint.citation} </span>`;
 }
 
 if (quoteToPrint.year !== undefined){
-  html += `<span class ="year">${printQuote.year}</span>`
+  html += `<span class ="year">${quoteToPrint.year}</span>`
 }
 
 html += `</p>`
-}
+
 
 document.getElementById('quote-box').innerHTML = html
-
+}
 
 /***
  * click event listener for the print quote button
