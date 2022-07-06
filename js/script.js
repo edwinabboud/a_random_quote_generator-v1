@@ -71,7 +71,6 @@ function printQuote(){
   
 
 
-
 html += `<p class="quote"> ${printQuote.quote} </p>`;
 html += `<p class="source"> ${printQuote.source}</p>`;
 
@@ -85,6 +84,7 @@ if (quoteToPrint.year !== undefined){
 
 html += `</p>`
 }
+
 document.getElementById('quote-box').innerHTML = html
 
 
