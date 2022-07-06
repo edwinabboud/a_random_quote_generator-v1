@@ -55,7 +55,7 @@ var quotes = [
 function getRandomQuote() {
   let randNumber = Math.floor(Math.random() * quotes.length);
   let randomQuote = quotes[randNumber];
-  return randomQuotes;
+  return randomQuote;
 }
 
 
@@ -68,44 +68,24 @@ var html;
 function printQuote(){
   quoteToPrint = getRandomQuote();
   html = "";
+  return quoteToPrint;
 }
 
-html += `<p class="quote"> ${quoteToPrint.quote} </p>`;
-html += `<p class="source"> ${quoteToPrint.source}</p>`;
+
+html += `<p class="quote"> ${printQuote().quote} </p>`;
+html += `<p class="source"> ${printQuote.source}</p>`;
 
 if (quoteToPrint.citation !== undefined){
-  html += `<span class="citation"> ${quoteToPrint.citation} </span>`;
+  html += `<span class="citation"> ${printQuote.citation} </span>`;
 }
 
 if (quoteToPrint.year !== undefined){
-  html += `<span class ="year">${quoteToPrint.year}</span>`
+  html += `<span class ="year">${printQuote.year}</span>`
 }
 
 html = `</p>`
 
 document.getElementById('quote-box').innerHTML = html
-
-
-
-let red
-let blue
-let green
-let rbgColor
-
-function colorChange() {
-  red = Math.floor(Math.random() * 256);
-  green = Math.floor(Math.random() * 256);
-  blue = Math.floor(Math.random() * 256);
-  rbgColor = "rgb(`${red} ${green} ${blue}`)";
-
-
-  document.body.style.background = bgColor;
-  }
-
-colorChange();
-
-let colorChange = () => refresh = setInterval(printQuote, 10000);
-autoChange()
 
 
 /***
