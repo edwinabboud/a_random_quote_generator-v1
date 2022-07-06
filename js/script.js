@@ -70,26 +70,27 @@ function printQuote(){
   html = "";
 }
 
-html += '<p class="quote"> ${quoteToPrint.quote} </p>';
-html += '<p class="source"> ${quoteToPrint.source}</p>';
+html += `<p class="quote"> ${quoteToPrint.quote} </p>`;
+html += `<p class="source"> ${quoteToPrint.source}</p>`;
 
 if (quoteToPrint.citation !== undefined){
   html += `<span class="citation"> ${quoteToPrint.citation} </span>`;
 }
 
 if (quoteToPrint.year !== undefined){
-  html += '<span class ="year">${quoteToPrint.year}</span>'
+  html += `<span class ="year">${quoteToPrint.year}</span>`
 }
 
-html = '</p>'
+html = `</p>`
 
 document.getElementById('quote-box').innerHTML = html
+
+
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 
 
 
