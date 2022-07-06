@@ -87,6 +87,27 @@ document.getElementById('quote-box').innerHTML = html
 
 
 
+let red
+let blue
+let green
+let rbgColor
+
+function colorChange() {
+  red = Math.floor(Math.random() * 256);
+  green = Math.floor(Math.random() * 256);
+  blue = Math.floor(Math.random() * 256);
+  rbgColor = "rgb(`${red} ${green} ${blue}`)";
+
+
+  document.body.style.background = bgColor;
+  }
+
+colorChange();
+
+let colorChange = () => refresh = setInterval(printQuote, 10000);
+autoChange()
+
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
